@@ -79,3 +79,8 @@ set completeopt=menuone,longest,preview
 
 " pep8
 let g:pep8_map='<leader>8'
+
+" pyflakes
+let g:pyflakes_use_quickfix = 0
+
+

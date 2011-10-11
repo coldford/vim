@@ -6,12 +6,11 @@
 mkdir -p ~/.vim/{autoload,bundle}
 
 # Setup pathogen
-ln -Fs ${PWD}/pathogen/pathogen.vim ~/.vim/autoload/
+ln -Fs ${PWD}/pathogen/plugin/pathogen.vim ~/.vim/autoload/
 
 # Symlink each bundle ~/.vim/
 ln -Fs ${PWD}/bundle/* ~/.vim/bundle/
 
-exit
 # Backup existing .vimrc
 if [ -e ~/.vimrc ]; 
 then
