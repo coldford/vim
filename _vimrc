@@ -66,6 +66,10 @@ nmap <F3> :call ToggleFoldIdent()<CR>
 " quickly cwd to dir of open file
 nmap <silent> <Leader>cd :cd %:p:h<CR>
 
+" navigate buffers
+nmap <silent> <Leader>[ :bp<CR>
+nmap <silent> <Leader>] :bn<CR>
+
 " colors
 set background=light
 
@@ -82,5 +86,6 @@ let g:pep8_map='<leader>8'
 
 " pyflakes
 let g:pyflakes_use_quickfix = 0
+
 
 
