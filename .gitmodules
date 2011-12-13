@@ -19,3 +19,9 @@
 [submodule "bundle/rope-vim"]
 	path = bundle/rope-vim
 	url = http://github.com/klen/rope-vim.git
+[submodule "bundle/pylint"]
+	path = bundle/pylint
+	url = http://github.com/klen/pylint-mode.git
+[submodule "bundle/tasklist"]
+	path = bundle/tasklist
+	url = http://github.com/vim-scripts/TaskList.vim.git
