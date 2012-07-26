@@ -85,7 +85,13 @@ set completeopt=menuone,longest,preview
 let g:pep8_map='<leader>8'
 
 " pyflakes
-let g:pyflakes_use_quickfix = 0
+let g:pyflakes_use_quickfix = 1
 
+" 256 color terminal
+set t_Co=256
+set background=dark
+colorscheme molokai
 
+" run jsl (javascript lint) when saving javascript files
+autocmd BufWritePost,FileWritePost *.js !test jsl && jsl -process <afile>
 
