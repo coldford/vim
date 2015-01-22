@@ -7,7 +7,7 @@
 " Need to call pathogen to load each vim plugin
 filetype off 
 call pathogen#helptags()
-call pathogen#runtime_append_all_bundles()
+call pathogen#infect()
 
 "" toggle foldmethod=indent 
 function ToggleFoldIdent()
@@ -94,7 +94,7 @@ set t_Co=256
 autocmd BufWritePost,FileWritePost *.js !test jshint && jshint <afile>
 "autocmd BufWritePost,FileWritePost *.js !test jslint && jslint <afile> | more
 "colorscheme seoul256-light
-colorscheme distinguished
+colorscheme flattown 
 
 "fix pyflakes highlight to work w/colorscheme 
 highlight SpellBad term=reverse ctermbg=1

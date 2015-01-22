@@ -6,7 +6,7 @@
 mkdir -p ~/.vim/{autoload,bundle,colors}
 
 # Setup pathogen
-ln -Fs ${PWD}/pathogen/plugin/pathogen.vim ~/.vim/autoload/
+ln -Fs ${PWD}/pathogen/autoload/pathogen.vim ~/.vim/autoload/
 
 # Symlink each bundle ~/.vim/
 ln -Fs ${PWD}/bundle/* ~/.vim/bundle/
