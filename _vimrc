@@ -77,9 +77,9 @@ set background=light
 " Plugins Config
 
 " SuperTab
-au FileType python set omnifunc=pythoncomplete#Complete
-let g:SuperTabDefaultCompletionType = "context"
-set completeopt=menuone,longest,preview
+"au FileType python set omnifunc=pythoncomplete#Complete
+"let g:SuperTabDefaultCompletionType = "context"
+"set completeopt=menuone,longest,preview
 
 " pep8
 let g:pep8_map='<leader>8'
@@ -89,8 +89,18 @@ let g:pyflakes_use_quickfix = 1
 
 " 256 color terminal
 set t_Co=256
-colorscheme railscast
 
 " run jsl (javascript lint) when saving javascript files
-autocmd BufWritePost,FileWritePost *.js !test jsl && jsl -process <afile>
+autocmd BufWritePost,FileWritePost *.js !test jshint && jshint <afile>
+"autocmd BufWritePost,FileWritePost *.js !test jslint && jslint <afile> | more
+"colorscheme seoul256-light
+colorscheme distinguished
 
+"fix pyflakes highlight to work w/colorscheme 
+highlight SpellBad term=reverse ctermbg=1
+
+"Ignore whitespace in vimdiff
+if &diff
+    " diff mode
+    set diffopt+=iwhite
+endif
